@@ -1,0 +1,424 @@
+<html>
+
+<head>
+  <title>My Cart</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+*{
+  color: darkblue;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+
+.header1 {
+  position: fixed;
+  top: 0;
+  bottom:;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #000;
+  padding: 3rem 9%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1rem;
+}
+
+
+
+.header1 .icons {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.header1 .icons:hover {
+  color: #eacf4f;
+}
+
+.header1 #menu-btn {
+  display: none;
+}
+
+.header1 .navbar a {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0 2rem;
+}
+
+.header1 .navbar a:hover {
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  color: #eacf4f;
+}
+
+.header1 .navbar .space {
+  display: inline-block;
+  width: 16rem;
+}
+
+.header1 .logo {
+  position: absolute;
+  top: 0.2rem;
+  left: 50%;
+  -webkit-transform: translateX(-40%);
+          transform: translateX(-50%);
+}
+
+.header1 .logo img {
+  width: 15rem;
+}
+
+.header1 .search-form {
+  height: 7rem;
+  padding: 0 2rem;
+  border-top: 0.2rem solid rgba(255, 255, 255, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #000;
+  position: absolute;
+  top: 99%;
+  left: 0;
+  right: 0;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.header1 .search-form.active {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.header1 .search-form input {
+  width: 100%;
+  background: none;
+  text-transform: none;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.header1 .fa-times {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.page-header{
+  position: relative;
+  margin-top: 10em;
+}
+
+  </style>
+</head>
+<header class="header1">
+
+  <div id="menu-btn" class="fas fa-bars icons"></div>
+  <div id="search-btn" class=""></div>
+
+  <nav class="navbar">
+     <a href="#home">home</a>
+     <a href="#menu">menu</a>
+     <span class="space"></span>
+     <a href="#contact">contact</a>
+     <a href="#about">about</a>
+  </nav>
+
+  <a href="#" class=""></a>
+
+  <a href="#home" class="logo"><img src="logo.jpg" alt=""></a>
+
+  <form action="" class="search-form">
+     <input type="search" name="" placeholder="search here..." id="search-box">
+     <label for="search-box" class="fas fa-search icons"></label>
+  </form>
+
+</header>
+
+<body class="container">
+
+  <div class="page-header">
+    <h1>Products
+      <div style="float: right; cursor: pointer;">
+        <span class="glyphicon glyphicon-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></span>
+      </div>
+    </h1>
+  </div>
+
+  
+
+  <div class="row">
+    <div class="col-md-3 text-center">
+      <img src="Pancit Bihon.jpg" width="150px" height="150px">
+      <br>
+    Pancit Bihon - <strong>Php500.00</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="1" data-name="Pancit Bihon" data-summary="summary 1" data-price="500" data-quantity="1" data-image="Pancit Bihon.jpg">Add to Cart</button>
+    </div>
+
+    <div class="col-md-3 text-center">
+      <img src="Spaghetti.jpg" width="150px" height="150px">
+      <br>
+     Spaghetti - <strong>Php500.00</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="2" data-name="Spaghetti" data-summary="summary 2" data-price="500" data-quantity="1" data-image="Spaghetti.jpg">Add to Cart</button>
+    </div>
+
+    <div class="col-md-3 text-center">
+      <img src="Palabok.jpg" width="150px" height="150px">
+      <br>
+ Palabok- <strong>Php500.00</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="3" data-name="Palabok" data-summary="summary 3" data-price="500" data-quantity="1" data-image="Palabok.jpg">Add to Cart</button>
+    </div>
+
+    <div class="col-md-3 text-center">
+      <img src="Shangcit Cake.jpg" width="150px" height="150px">
+      <br>
+      product 4 - <strong>Php300.00</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="4" data-name="Shangcit Cake" data-summary="summary 4" data-price="300" data-quantity="1" data-image="Shangcit Cake.jpg">Add to Cart</button>
+    </div>
+
+    <div class="col-md-3 text-center">
+      <img src="Lumpiang Shanghai.jpg" width="150px" height="150px">
+      <br>
+   Lumpiang Shanghai- <strong>100 pcs - Php600.00</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="5" data-name="Lumpiang Shanghai" data-summary="summary 5" data-price="600" data-quantity="1" data-image="Lumpiang Shanghai.jpg">Add to Cart</button>
+    </div>
+  <div class="col-md-3 text-center">
+      <img src="Litson Manok.jpg" width="150px" height="150px">
+      <br>
+   Litson Manok- <strong>Php900.00</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="6" data-name="Litson Manok" data-summary="summary 6" data-price="900" data-quantity="1" data-image="Litson Manok.jpg">Add to Cart</button>
+    </div>
+      <div class="col-md-3 text-center">
+      <img src="Maja.jpg" width="150px" height="150px">
+      <br>
+   Maja- <strong>Php200.00</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="7" data-name="Maja" data-summary="summary 7" data-price="200" data-quantity="1" data-image="Maja.jpg">Add to Cart</button>
+    </div>
+      <div class="col-md-3 text-center">
+      <img src="Puto.jpg" width="150px" height="150px">
+      <br>
+ Puto- <strong>$50</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="8" data-name="Puto" data-summary="summary 8" data-price="50" data-quantity="1" data-image="Puto.jpg">Add to Cart</button>
+    </div>
+      <div class="col-md-3 text-center">
+      <img src="Puto Kutsinta.jpg" width="150px" height="150px">
+      <br>
+  Puto Kutsinta- <strong>$50</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="9" data-name="Puto Kutsinta" data-summary="summary 9" data-price="50" data-quantity="1" data-image="Puto Kutsinta.jpg">Add to Cart</button>
+    </div>
+      <div class="col-md-3 text-center">
+      <img src="Puto Cake.jpg" width="150px" height="150px">
+      <br>
+  Puto Cake- <strong>$50</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="10" data-name="Puto Cake" data-summary="summary 10" data-price="50" data-quantity="1" data-image="Puto Cake">Add to Cart</button>
+    </div>
+      <div class="col-md-3 text-center">
+      <img src="Bico.jpg" width="150px" height="150px">
+      <br>
+   Bico- <strong>$50</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="11" data-name="Bico" data-summary="summary 11" data-price="50" data-quantity="1" data-image="Bico.jpg">Add to Cart</button>
+    </div> 
+     <div class="col-md-3 text-center">
+      <img src="Sapin-sapin.jpg" width="150px" height="150px">
+      <br>
+  Sapin-sapin- <strong>$50</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="12" data-name="Sapin-sapin" data-summary="summary 12" data-price="50" data-quantity="1" data-image="Sapin-sapin.jpg">Add to Cart</button>
+    </div>
+      <div class="col-md-3 text-center">
+      <img src="Guisado.jpg" width="150px" height="150px">
+      <br>
+   Guisado- <strong>$50</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="13" data-name="Guisado" data-summary="summary 13" data-price="50" data-quantity="1" data-image="Guisado.jpg">Add to Cart</button>
+    </div>
+      <div class="col-md-3 text-center">
+      <img src="Lomi.jpg" width="150px" height="150px">
+      <br>
+   Lomi- <strong>$50</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="14" data-name="Lomi" data-summary="summary 14" data-price="50" data-quantity="1" data-image="Lomi.jpg">Add to Cart</button>
+    </div>
+      <div class="col-md-3 text-center">
+      <img src="Pansit Batil Patong.jpg" width="150px" height="150px">
+      <br>
+   Pansit Batil Patong- <strong>$50</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="15" data-name="Pansit Batil Patong" data-summary="summary 15" data-price="50" data-quantity="1" data-image="Pansit Batil Patong.jpg">Add to Cart</button>
+    </div>
+      <div class="col-md-3 text-center">
+      <img src="Pansit Tustado.jpg" width="150px" height="150px">
+      <br>
+   Pansit Tustado - <strong>$50</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="16" data-name="Pansit Tustado" data-summary="summary 16" data-price="50" data-quantity="1" data-image="Pansit Tustado.jpg">Add to Cart</button>
+    </div>
+    <div class="col-md-3 text-center">
+      <img src="Tapsilog.jpg" width="150px" height="150px">
+      <br>
+   Tapsilog- <strong>$50</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="17" data-name="Tapsilog" data-summary="summary 17" data-price="50" data-quantity="1" data-image="Tapsilog.jpg">Add to Cart</button>
+    </div>
+    <div class="col-md-3 text-center">
+      <img src="Sisilog.jpg" width="150px" height="150px">
+      <br>
+  Sisilog- <strong>$50</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="18" data-name="Sisilog" data-summary="summary 18" data-price="50" data-quantity="1" data-image="Sisilog.jpg">Add to Cart</button>
+    </div>
+    <div class="col-md-3 text-center">
+      <img src="Porksilog.jpg" width="150px" height="150px">
+      <br>
+   Porksilog- <strong>$50</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="19" data-name="Porksilog" data-summary="summary 19" data-price="50" data-quantity="1" data-image="Porksilog.jpg">Add to Cart</button>
+    </div>
+    <div class="col-md-3 text-center">
+      <img src="Hotsilog.jpg" width="150px" height="150px">
+      <br>
+   Hotsilog- <strong>$50</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="20" data-name="Hotsilog" data-summary="summary 20" data-price="50" data-quantity="1" data-image="Hotsilog.jpg">Add to Cart</button>
+    </div>
+    <div class="col-md-3 text-center">
+      <img src="Longsilog.jpg" width="150px" height="150px">
+      <br>
+   Longsilog- <strong>$50</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="21" data-name="Longsilog" data-summary="summary 21" data-price="50" data-quantity="1" data-image="Longsilog.jpg">Add to Cart</button>
+    </div>
+    <div class="col-md-3 text-center">
+      <img src="Shanghai Silog.jpg" width="150px" height="150px">
+      <br>
+   Shanghai Silog- <strong>$50</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="22" data-name="Shanghai Silog" data-summary="summary 22" data-price="50" data-quantity="1" data-image="Shanghai Silog.jpg">Add to Cart</button>
+    </div>
+    <div class="col-md-3 text-center">
+      <img src="Coke Mismo.jpg" width="150px" height="150px">
+      <br>
+   Coke Mismo- <strong>$50</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="23" data-name="Coke Mismo" data-summary="summary 23" data-price="50" data-quantity="1" data-image="Coke Mismo.jpg">Add to Cart</button>
+    </div>
+    <div class="col-md-3 text-center">
+      <img src="mountain dew.jpg" width="150px" height="150px">
+      <br>
+   Mountain Dew- <strong>$50</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="24" data-name="Mountain Dew" data-summary="summary 24" data-price="50" data-quantity="1" data-image="mountain dew.jpg">Add to Cart</button>
+    </div>
+  </div>
+
+
+  <script src="jquery-2.2.3.min.js"></script>
+  <script type='text/javascript' src="bootstrap.min.js"></script>
+  <script type='text/javascript' src="jquery.mycart.js"></script>
+  <script type="text/javascript">
+  $(function () {
+
+    var goToCartIcon = function($addTocartBtn){
+      var $cartIcon = $(".my-cart-icon");
+      var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({"position": "fixed", "z-index": "999"});
+      $addTocartBtn.prepend($image);
+      var position = $cartIcon.position();
+      $image.animate({
+        top: position.top,
+        left: position.left
+      }, 500 , "linear", function() {
+        $image.remove();
+      });
+    }
+
+    $('.my-cart-btn').myCart({
+      currencySymbol: '₱',
+      classCartIcon: 'my-cart-icon',
+      classCartBadge: 'my-cart-badge',
+      classProductQuantity: 'my-product-quantity',
+      classProductRemove: 'my-product-remove',
+      classCheckoutCart: 'my-cart-checkout',
+      affixCartIcon: true,
+      showCheckoutModal: true,
+      numberOfDecimals: 2,
+      cartItems: [],
+      clickOnAddToCart: function($addTocart){
+        goToCartIcon($addTocart);
+      },
+      afterAddOnCart: function(products, totalPrice, totalQuantity) {
+        console.log("afterAddOnCart", products, totalPrice, totalQuantity);
+      },
+      clickOnCartIcon: function($cartIcon, products, totalPrice, totalQuantity) {
+        console.log("cart icon clicked", $cartIcon, products, totalPrice, totalQuantity);
+      },
+      checkoutCart: function(products, totalPrice, totalQuantity) {
+        var checkoutString = "Total Price: " + totalPrice + "\nTotal Quantity: " + totalQuantity;
+   
+       
+        alert(checkoutString)
+        console.log("checking out", products, totalPrice, totalQuantity);
+      },
+    });
+
+    
+    });
+
+    
+  
+  </script>
+
+  <script src="app.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<script>
+
+AOS.init({
+   duration: 300,
+});
+
+</script>
+
+</body>
+
+</html>
