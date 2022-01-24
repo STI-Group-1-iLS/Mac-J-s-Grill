@@ -804,11 +804,39 @@ outline: none;
   .home .content h3 {
     font-size: 2.5rem;
   }
+  
+  .about .image {
+    display: none;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+
+.about .image img {
+  display: none;
+  width: 100%;
+}
 }
 
 @media (max-width: 450px) {
   html {
     font-size: 50%;
   }
+  
+    .about .image {
+    display: none;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+
+.about .image img {
+  display: none;
+  width: 100%;
+}
 }
 /*# sourceMappingURL=style.css.map */
